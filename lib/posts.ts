@@ -102,16 +102,13 @@ export function extractHeadings(markdown: string) {
   return markdown
     .split('\n')
     .filter(
-      (line) =>
-        line.startsWith('## ') ||
-        line.startsWith('### ')
+      l => l.startsWith('## ') || l.startsWith('### ')
     )
-    .map((line) => {
-      const text = line.replace(/^###+\s/, '');
-
+    .map(l => {
+      const text = l.replace(/^###+\s/, '');
       return {
         id: slugify(text),
         text,
       };
     });
-  }
+}
