@@ -16,5 +16,5 @@ export function getCategories(){ return Array.from(new Set(getAllPosts().map(p=>
 export function getPostsByCategory(category: string){ return getAllPosts().filter(p=>p.category.toLowerCase()===category.toLowerCase()); }
 export function getPostBySlug(slug: string): Post { const { data, content } = matter(fs.readFileSync(path.join(dir, `${slug}.mdx`),'utf8')); return { title:data.title, slug:data.slug, category:data.category, excerpt:data.excerpt, date:data.date, updated:data.updated, author:data.author, readingTime:data.readingTime, featured:Boolean(data.featured), seoTitle:data.seoTitle, seoDescription:data.seoDescription, content }; }
 export async function markdownToHtml(markdown: string){ return (await remark().use(remarkGfm).use(remarkHtml).process(markdown)).toString(); }
-export function extractHeadings(markdown: string){ return markdown.split('
+export function extractHeadings(markdown: string){ return markdown.split('\n')
 ').filter(l=>l.startsWith('## ')||l.startsWith('### ')).map(l=>{ const text=l.replace(/^###+\s/,''); return { id: slugify(text), text }; }); }
