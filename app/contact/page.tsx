@@ -1,0 +1,3 @@
+import type { Metadata } from 'next';
+export const metadata: Metadata = { title: 'Contact', description: 'Use the main site for direct service inquiries or add your final contact channels here.' };
+export default function Page() { return <div className="container-page py-12 sm:py-16"><div className="max-w-3xl"><div className="small-label">Contact</div><h1 className="h1 mt-2">Contact</h1><p className="lead mt-5">Use the main site for direct service inquiries or add your final contact channels here.</p></div><div className="card mt-10 p-6 prose-like"><p>Use the main site for direct service inquiries or add your final contact channels here. Expand this page with your final approved copy before launch.</p></div></div>; }

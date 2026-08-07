@@ -1,0 +1,3 @@
+import type { Metadata } from 'next';
+export const metadata: Metadata = { title: 'Privacy Policy', description: 'This starter privacy policy page should be updated with your final data and tracking disclosures.' };
+export default function Page() { return <div className="container-page py-12 sm:py-16"><div className="max-w-3xl"><div className="small-label">Privacy Policy</div><h1 className="h1 mt-2">Privacy Policy</h1><p className="lead mt-5">This starter privacy policy page should be updated with your final data and tracking disclosures.</p></div><div className="card mt-10 p-6 prose-like"><p>This starter privacy policy page should be updated with your final data and tracking disclosures. Expand this page with your final approved copy before launch.</p></div></div>; }

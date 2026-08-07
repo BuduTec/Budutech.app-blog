@@ -1,0 +1,3 @@
+import type { Metadata } from 'next';
+export const metadata: Metadata = { title: 'About', description: 'BuduTech Knowledge Hub is designed to educate, guide, and convert readers into informed customers.' };
+export default function Page() { return <div className="container-page py-12 sm:py-16"><div className="max-w-3xl"><div className="small-label">About</div><h1 className="h1 mt-2">About</h1><p className="lead mt-5">BuduTech Knowledge Hub is designed to educate, guide, and convert readers into informed customers.</p></div><div className="card mt-10 p-6 prose-like"><p>BuduTech Knowledge Hub is designed to educate, guide, and convert readers into informed customers. Expand this page with your final approved copy before launch.</p></div></div>; }

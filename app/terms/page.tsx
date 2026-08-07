@@ -1,0 +1,3 @@
+import type { Metadata } from 'next';
+export const metadata: Metadata = { title: 'Terms', description: 'This starter terms page should be updated with your final service terms before launch.' };
+export default function Page() { return <div className="container-page py-12 sm:py-16"><div className="max-w-3xl"><div className="small-label">Terms</div><h1 className="h1 mt-2">Terms</h1><p className="lead mt-5">This starter terms page should be updated with your final service terms before launch.</p></div><div className="card mt-10 p-6 prose-like"><p>This starter terms page should be updated with your final service terms before launch. Expand this page with your final approved copy before launch.</p></div></div>; }

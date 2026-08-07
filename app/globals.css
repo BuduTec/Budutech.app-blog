@@ -1,0 +1,28 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root { --bg:#f7f9fc; --ink:#101828; --muted:#667085; --line:#e5e7eb; --blue:#082d83; --blue2:#0d52d8; --cyan:#10b9e8; --green:#18b956; }
+html { scroll-behavior:smooth; }
+body { color:var(--ink); background: radial-gradient(circle at top right, rgba(13,82,216,.08), transparent 30%), linear-gradient(180deg, #fff 0%, var(--bg) 100%); }
+::selection { background: rgba(13,82,216,.18); }
+.container-page { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+.card { @apply rounded-[24px] border border-slate-200 bg-white shadow-sm; }
+.card-elevated { @apply rounded-[24px] border border-slate-200 bg-white shadow-glow; }
+.btn-primary { @apply inline-flex items-center justify-center rounded-full bg-budutech-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-budutech-800; }
+.btn-secondary { @apply inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-50; }
+.btn-ghost { @apply inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-budutech-800 transition hover:bg-budutech-50; }
+.pill { @apply inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600; }
+.small-label { @apply text-xs font-semibold uppercase tracking-[0.18em] text-budutech-700; }
+.h1 { @apply text-4xl font-black tracking-tight text-slate-950 sm:text-5xl lg:text-6xl; }
+.h2 { @apply text-2xl font-black tracking-tight text-slate-950 sm:text-3xl lg:text-4xl; }
+.h3 { @apply text-xl font-bold tracking-tight text-slate-950; }
+.lead { @apply text-base leading-7 text-slate-600 sm:text-lg; }
+.article-meta { @apply flex flex-wrap items-center gap-2 text-sm text-slate-500; }
+.prose-like { @apply text-slate-700 leading-7; }
+.prose-like h2 { @apply mt-10 text-2xl font-black tracking-tight text-slate-950; }
+.prose-like h3 { @apply mt-8 text-xl font-bold text-slate-950; }
+.prose-like p { @apply my-4; }
+.prose-like ul { @apply my-4 list-disc pl-6; }
+.prose-like a { @apply text-budutech-700 underline underline-offset-4; }
+.table-of-contents a { @apply block rounded-lg px-2 py-1 text-sm text-slate-700 transition hover:bg-slate-100 hover:text-slate-950; }
