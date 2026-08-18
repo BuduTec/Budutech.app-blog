@@ -112,3 +112,31 @@ export function extractHeadings(markdown: string) {
       };
     });
 }
+// Add this to the bottom of lib/posts.ts
+export function getSearchIndex(): PostMeta[] {
+  // Returns exactly what getAllPosts() does, but strips out the 'content' field
+  // This prevents sending megabytes of text to the client browser on the search page.
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith('.mdx') || f.endsWith('.md'))
+    .map((file) => {
+      const { data } = matter(
+        fs.readFileSync(path.join(dir, file), 'utf8')
+      );
+
+      return {
+        title: data.title,
+        slug: slugify(data.title),
+        category: data.category,
+        excerpt: data.excerpt,
+        date: data.date,
+        updated: data.updated || data.date,
+        author: data.author,
+        readingTime: data.readingTime || '5 min read',
+        featured: data.featured || false,
+        seoTitle: data.seoTitle || data.title,
+        seoDescription: data.seoDescription || data.excerpt,
+      } as PostMeta;
+    })
+    .sort((a, b) => (new Date(b.date).getTime() - new Date(a.date).getTime()));
+}
